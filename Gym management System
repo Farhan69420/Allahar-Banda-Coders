@@ -3,3 +3,17 @@
 #include<string.h>
 #include<time.h>
 #include<math.h>
+
+struct Member
+{
+    char Name[50], BloodGroup[5], Address[100], Contact[15];
+    int ID;
+    float MembershipPeriod;
+};
+
+struct Staff
+{
+    char Name[50], Address[100], Contact[15];
+    int ID;
+    int Salary;
+};
