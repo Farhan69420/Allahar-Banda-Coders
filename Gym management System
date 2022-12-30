@@ -267,4 +267,25 @@ printf("Deadline of membership: %02d/%02d/%04d\n",
 deadline->tm_mday, deadline->tm_mon+1, deadline->tm_year+1900);
 }
 
+void SalesReport(struct Product products[], struct Member members[])
+{
+    int i;
+    float revenue = 0.0;
+    FILE *fp;
+    fp = fopen("SalesReport.txt", "w");
+    fprintf(fp, "Sales Report\n");
+    fprintf(fp, "\nProducts Sold\n");
+    for (i = 0; products[i].Name != '\0'; i++)
+    {
+        fprintf(fp, "Name: %s\n", products[i].Name);
+        fprintf(fp, "Quantity Sold: %d\n", products[i].Quantity);
+        fprintf(fp, "Price: %.2f\n\n", products[i].Price);
+        revenue += (products[i].Quantity * products[i].Price);
+    }
+    fprintf(fp, "Total Revenue Generated from Products: %.2f\n", revenue);
+    fclose(fp);
+}
+
+
+
 
