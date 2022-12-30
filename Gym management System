@@ -228,5 +228,35 @@ void StaffFiles(struct Staff staff)
     fclose(fp);
 }
 }
+void TrainerFiles(struct Trainer trainer)
+{
+    char filename[100]="Trainers";
+    strcat(filename, ".txt");
+    FILE *fp;
+    fp = fopen(filename, "w");
+    if (fp == NULL)
+    {
+        printf("Error opening the file\n");
+    }
+    else{
+    fprintf(fp, "\nTrainer Details\n");
+    fprintf(fp, "Name: %s\n", trainer.Name);
+    fprintf(fp, "ID: %d\n", trainer.ID);
+    fprintf(fp, "Address: %s\n", trainer.Address);
+    fprintf(fp, "Contact: %s\n", trainer.Contact);
+    fprintf(fp, "Salary: %d\n", trainer.Salary);
+    fclose(fp);
+}
+}
+float totalRevenue(struct Product products[])
+{
+int i;
+float revenue = 0.0;
+for (i = 0; strlen(products[i].Name) != 0; i++)
+{
+revenue += (products[i].Quantity * products[i].Price);
+}
+return revenue;
+}
 
 
