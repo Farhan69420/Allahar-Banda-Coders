@@ -17,3 +17,17 @@ struct Staff
     int ID;
     int Salary;
 };
+struct Trainer
+{
+    char Name[50], Address[100], Contact[15];
+    int ID;
+    int Salary;
+};
+
+struct Product
+{
+    char Name[50];
+    int Quantity;
+    float Price;
+};
+
