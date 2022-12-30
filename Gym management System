@@ -40,4 +40,17 @@ void SalesReport(struct Product[], struct Member[]);
 void MemberFiles(struct Member member);
 void StaffFiles(struct Staff staff);
 void TrainerFiles(struct Trainer trainer);
+int main()
+{
+    struct Member members[100];
+    struct Staff staff[100];
+    struct Trainer trainer[100];
+    struct Product products[100];
+    int i, n, m, t, p,height,weight;
+    float BMI, revenue;
+    printf("********Welcome to the Gym Management Sysytem*********\n");
+    printf("\n");
+    printf("Enter the number of members: ");
+    scanf("%d", &n);
+
 
