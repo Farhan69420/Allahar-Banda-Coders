@@ -140,6 +140,36 @@ int main()
         scanf("%f", &products[i].Price);
         printf("\n");
     }
+revenue = totalRevenue(products);
+    printf("\nTotal revenue generated: %.2f\n", revenue);
+
+    SalesReport(products, members);
+
+    return 0;
+}
+
+float calculateBMI(float height, float weight)
+{
+    float BMI;
+    BMI = (weight) / (height * height);
+    return BMI;
+}
+
+void fitnessProgramme(float BMI)
+{
+    if (BMI < 18.5)
+    {
+        printf("Fitness Programme: Low intensity aerobic exercise, strength training\n");
+    }
+    else if (BMI >= 18.5 && BMI <= 24.9)
+    {
+        printf("Fitness Programme: Moderate intensity aerobic exercise, strength training\n");
+    }
+    else if (BMI > 24.9)
+    {
+        printf("Fitness Programme: High intensity aerobic exercise, strength training\n");
+    }
+}
 
 
 
