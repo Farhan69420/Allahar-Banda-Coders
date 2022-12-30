@@ -30,4 +30,14 @@ struct Product
     int Quantity;
     float Price;
 };
+void print_deadline(int months);
+float calculateBMI(float, float);
+void fitnessProgramme(float);
+void dietPlan(float);
+void generateFiles(struct Member, struct Staff, struct Trainer);
+float totalRevenue(struct Product[]);
+void SalesReport(struct Product[], struct Member[]);
+void MemberFiles(struct Member member);
+void StaffFiles(struct Staff staff);
+void TrainerFiles(struct Trainer trainer);
 
