@@ -52,5 +52,33 @@ int main()
     printf("\n");
     printf("Enter the number of members: ");
     scanf("%d", &n);
+     for (i = 0; i < n; i++)
+    {
+        printf("\nEnter details for Member %d: \n", i + 1);
+        printf("Name: ");
+        scanf("%s", &members[i].Name);
+        printf("ID: ");
+        scanf("%d", &members[i].ID);
+        printf("Blood Group: ");
+        scanf("%s", &members[i].BloodGroup);
+        printf("Address: ");
+        scanf("%s", &members[i].Address);
+        printf("Contact: ");
+        scanf("%s", &members[i].Contact);
+        printf("Membership Period(in months): ");
+        scanf("%f", &members[i].MembershipPeriod);
+        float height, weight;
+        printf("Height(in meters): ");
+        scanf("%f", &height);
+        printf("Weight(in kilograms): ");
+        scanf("%f", &weight);
+        BMI = calculateBMI(height, weight);
+        printf("BMI: %f\n",BMI);
+        fitnessProgramme(BMI);
+        dietPlan(BMI);
+        print_deadline(members[i].MembershipPeriod);
+        printf("\n");
+    }
+
 
 
