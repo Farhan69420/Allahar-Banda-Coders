@@ -114,6 +114,32 @@ int main()
         scanf("%d", &trainer[i].Salary);
         printf("\n");
     }
+ for (i = 0; i < n; i++)
+    {
+        MemberFiles(members[i]);
+    }
+    for (i = 0; i < m; i++)
+    {
+        StaffFiles(staff[i]);
+    }
+    for (i = 0; i < t; i++)
+    {
+        TrainerFiles(trainer[i]);
+    }
+
+    printf("\nEnter the number of products: ");
+    scanf("%d", &p);
+    for (i = 0; i < p; i++)
+    {
+        printf("\nEnter details for Product %d: \n", i + 1);
+        printf("Name: ");
+        scanf("%s", &products[i].Name);
+        printf("Quantity: ");
+        scanf("%d", &products[i].Quantity);
+        printf("Price: ");
+        scanf("%f", &products[i].Price);
+        printf("\n");
+    }
 
 
 
