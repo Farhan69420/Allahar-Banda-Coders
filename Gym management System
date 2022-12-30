@@ -79,6 +79,41 @@ int main()
         print_deadline(members[i].MembershipPeriod);
         printf("\n");
     }
+       printf("\nEnter the number of staff: ");
+       scanf("%d", &m);
+    for (i = 0; i < m; i++)
+    {
+        printf("\nEnter details for Staff %d: \n", i + 1);
+        printf("Name: ");
+        scanf("%s", &staff[i].Name);
+        printf("ID: ");
+        scanf("%d", &staff[i].ID);
+        printf("Address: ");
+        scanf("%s", &staff[i].Address);
+        printf("Contact: ");
+        scanf("%s", &staff[i].Contact);
+        printf("Salary(in dollars): ");
+        scanf("%d", &staff[i].Salary);
+        printf("\n");
+    }
+
+    printf("\nEnter the number of trainer: ");
+    scanf("%d", &t);
+    for (i = 0; i < t; i++)
+    {
+        printf("\nEnter details for Trainer %d: \n", i + 1);
+        printf("Name: ");
+        scanf("%s", &trainer[i].Name);
+        printf("ID: ");
+        scanf("%d", &trainer[i].ID);
+        printf("Address: ");
+        scanf("%s", &trainer[i].Address);
+        printf("Contact: ");
+        scanf("%s", &trainer[i].Contact);
+        printf("Salary(in dollars): ");
+        scanf("%d", &trainer[i].Salary);
+        printf("\n");
+    }
 
 
 
