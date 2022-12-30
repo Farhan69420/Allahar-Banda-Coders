@@ -208,5 +208,25 @@ void MemberFiles(struct Member member)
 }
 }
 
+void StaffFiles(struct Staff staff)
+{
+    char filename[100]="Staff";
+    strcat(filename, ".txt");
+    FILE *fp;
+    fp = fopen(filename, "w");
+    if (fp == NULL)
+    {
+        printf("Error opening the file\n");
+    }
+    else{
+    fprintf(fp, "\nStaff Details\n");
+    fprintf(fp, "Name: %s\n", staff.Name);
+    fprintf(fp, "ID: %d\n", staff.ID);
+    fprintf(fp, "Address: %s\n", staff.Address);
+    fprintf(fp, "Contact: %s\n", staff.Contact);
+    fprintf(fp, "Salary: %d\n", staff.Salary);
+    fclose(fp);
+}
+}
 
 
