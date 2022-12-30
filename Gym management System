@@ -170,6 +170,43 @@ void fitnessProgramme(float BMI)
         printf("Fitness Programme: High intensity aerobic exercise, strength training\n");
     }
 }
+void dietPlan(float BMI)
+{
+    if (BMI < 18.5)
+    {
+        printf("Diet Plan: Increase calorie intake, protein-rich foods\n");
+    }
+    else if (BMI >= 18.5 && BMI <= 24.9)
+    {
+        printf("Diet Plan: Balanced diet with adequate protein and vitamins\n");
+    }
+    else if (BMI > 24.9)
+    {
+        printf("Diet Plan: Low calorie and low fat diet\n");
+    }
+}
+
+void MemberFiles(struct Member member)
+{
+    char filename[100]="Members";
+    strcat(filename, ".txt");
+    FILE *fp;
+    fp = fopen(filename, "w");
+     if (fp == NULL)
+    {
+        printf("Error opening the file\n");
+    }
+    else{
+    fprintf(fp, "Member Details\n");
+    fprintf(fp, "Name: %s\n", member.Name);
+    fprintf(fp, "ID: %d\n", member.ID);
+    fprintf(fp, "Blood Group: %s\n", member.BloodGroup);
+    fprintf(fp, "Address: %s\n", member.Address);
+    fprintf(fp, "Contact: %s\n", member.Contact);
+    fprintf(fp, "Membership Period: %.2f\n", member.MembershipPeriod);
+    fclose(fp);
+}
+}
 
 
 
