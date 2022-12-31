@@ -148,12 +148,14 @@ revenue = totalRevenue(products);
     return 0;
 }
 
+
 float calculateBMI(float height, float weight)
 {
     float BMI;
     BMI = (weight) / (height * height);
     return BMI;
 }
+
 
 void fitnessProgramme(float BMI)
 {
