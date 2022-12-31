@@ -267,6 +267,7 @@ printf("Deadline of membership: %02d/%02d/%04d\n",
 deadline->tm_mday, deadline->tm_mon+1, deadline->tm_year+1900);
 }
 
+
 void SalesReport(struct Product products[], struct Member members[])
 {
     int i;
