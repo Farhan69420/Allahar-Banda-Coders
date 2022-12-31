@@ -48,7 +48,7 @@ int main()
     struct Product products[100];
     int i, n, m, t, p,height,weight;
     float BMI, revenue;
-    printf("********Welcome to the Gym Management Sysytem*********\n");
+    printf("************Welcome to the Gym Management Sysytem************\n");
     printf("\n");
     printf("Enter the number of members: ");
     scanf("%d", &n);
